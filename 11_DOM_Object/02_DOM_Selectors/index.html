@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="blockDiv">
+      <ul>
+        <li>Item One</li>
+        <li>Item Two</li>
+      </ul>
+    </div>
+    <p id="mark">This is paragraph One</p>
+    <p class="test">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt alias
+      porro a, aut atque quis eaque nulla molestias laboriosam corrupti
+      asperiores? Laborum aut, ea deleniti omnis voluptatum sunt quidem dolorum!
+    </p>
+
+    <button onclick="findTag('mark')">
+      click
+    </button>
+
+    <script>
+      //learn about JavaScript document object selectors
+
+      //  alert(document.documentElement.getAttribute("lang"));
+      document.body.style.background = "lightblue";
+      document.writeln(document.head.firstElementChild.nodeName);
+
+      document.writeln(document.body);
+
+      //find the two p tags inside the body
+      // and highlight with color the p tag which as id..
+
+      //document.getElementByID("name of id");
+      let getID = document.getElementById("mark");
+      document.writeln(getID);
+      // if (false) {
+      //   getID.style.background = "yellow";
+      // } else {
+      // }
+      function findTag(id) {
+        document.getElementById(id).style.background = "yellow";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object By ClassName</title>
+  </head>
+  <body>
+    <p class="test">Lorem ipsum dolor sit amet.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fuga id
+      eius beatae sequi similique, harum quaerat! Repellat, sed! Enim fugit esse
+      atque nihil error eveniet fugiat perferendis harum qui.
+    </p>
+    <div class="block test">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+        quas debitis, at eligendi odit qui laudantium assumenda fuga aliquam
+        unde nulla nostrum cum. Suscipit, veniam fuga labore rem a asperiores.
+      </p>
+    </div>
+
+    <button onclick="classColor()">Click me for color</button>
+
+    <div class="todo">
+      <ul>
+        <li>itemOne</li>
+        <li class="even">itemTwo</li>
+        <li>itemThree</li>
+        <li class="even">itemFour</li>
+        <li>itemFive</li>
+        <li class="even">itemSix</li>
+      </ul>
+    </div>
+
+    <button onclick="evenOrOdd()">Even Items</button>
+
+    <script>
+      let match = document.getElementsByClassName("test");
+      document.writeln(match.length);
+
+      function classColor() {
+        match[0].style.color = "red";
+        match[match.length - 1].style.color = "blue";
+        for (let tag in match) {
+          match[tag].style.background = "yellow";
+        }
+      }
+
+      let even = document.getElementsByClassName("even");
+      document.writeln("<br>" + even.length);
+
+      function evenOrOdd() {
+        for (let key in even) {
+          even[key].style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
