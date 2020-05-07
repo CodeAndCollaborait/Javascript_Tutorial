@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object By QuerySelector</title>
+    <style>
+      body {
+        background: lightblue;
+      }
+      ul li {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 28px;
+        color: red;
+      }
+      #itemTwo {
+        color: blue;
+      }
+      .itemThree {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CSS way of modifying the html -->
+    <ul>
+      <li>Coffee</li>
+      <li id="itemTwo">Milk</li>
+      <li class="itemThree">Sugar</li>
+    </ul>
+
+    <script>
+      let match = document.querySelectorAll("ul li");
+      document.writeln(+match.length);
+      for (let key of match) {
+        document.write("<br> " + key.innerHTML + "<br>");
+      }
+    </script>
+  </body>
+</html>

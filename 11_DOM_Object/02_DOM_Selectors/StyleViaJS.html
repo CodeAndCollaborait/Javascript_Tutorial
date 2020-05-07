@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Style</title>
+  </head>
+  <body>
+    <p id="intro">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+    <button onclick="applyStyle()">
+      click
+    </button>
+    <script>
+      let element = document.querySelectorAll("#intro");
+      document.writeln(element.length);
+
+      function applyStyle() {
+        for (let i in element) {
+          element[i].style.color = "blue";
+          element[i].style.fontSize = "28px";
+          element[i].style.fontWeight = "bold";
+        }
+      }
+    </script>
+  </body>
+</html>

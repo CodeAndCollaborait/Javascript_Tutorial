@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main">
+      <h1 id="title">Hello World!</h1>
+      <p id="hint">this is simple p tag</p>
+    </div>
+
+    <button onclick="insertHTML()">Add Another Div</button>
+
+    <script>
+      function insertHTML() {
+        //Creating new div tag...
+        let newDiv = document.createElement("div");
+        //create text inside the div
+        let text = document.createTextNode("this is new div with text init");
+        newDiv.appendChild(text);
+        //new div after the existing div
+        let currentDiv = document.getElementById("main");
+        document.body.appendChild(newDiv, currentDiv);
+      }
+    </script>
+  </body>
+</html>
