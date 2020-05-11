@@ -4,5 +4,5 @@
   "editor.formatOnSave": true,
   "workbench.panel.defaultLocation": "right",
   "terminal.integrated.fontSize": 16,
-  "editor.fontSize": 22
+  "editor.fontSize": 18
 }
